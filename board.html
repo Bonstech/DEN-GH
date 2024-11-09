@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boarding Of Directors</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: green;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 50px;
+    margin-left: 16px;
+    border-radius: 60%;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+.executives h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.executive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2em;
+    margin-top: 60px;
+    margin-left: 280px;
+    margin-right: 180px;
+    margin-bottom: 0%;
+   
+    
+}
+
+.executive {
+    background-color: #7a827c;
+    padding: 1em;
+   margin-top: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.executive img {
+    width: 140px;
+    height: 130px;
+    border-radius: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.executive h3 {
+    margin: 0.5em 0 0.2em;
+    text-align: left;
+    color: rgb(5, 4, 4);
+
+}
+
+.executive h3 {
+    color: white;
+
+}
+
+.executive p {
+    margin: 0;
+    color: rgb(228, 228, 16);
+    text-align: left;
+}
+.info {
+    background-color: #5d7362;
+    display: none; /* Hidden by default */
+    margin-top: 5px;
+    z-index: 10;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.image img{
+    width: 30px;
+    height: 30px;
+    filter: none;
+    border-radius: 120px;
+    border-style: solid;
+    border-color: rgb(231, 231, 8);
+    transition: transform 0.3s ease;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+button{
+    background-color: white;
+    color: green;
+    border-radius: 30px;
+}
+.image img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .executive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2em;
+    margin-top: 60px;
+    margin-left: 40px;
+margin-right: 30px;
+margin-bottom: 20px;}
+
+header {
+        flex-direction: row; /* Keep logo and nav horizontal */
+        justify-content: space-between;
+        padding: 7px 7px;
+    }
+    
+    nav ul {
+        flex-direction: row; /* Ensure the nav links stay horizontal */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 7px; /* Add margin between the items */
+    }
+    
+    .logo img {
+        max-height: 40px;
+        border-radius: 60%;
+        margin-right: 2px;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="LOGOmain.jpg" alt="Agricultural Organization Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html" target="_blank">About Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <!--<li><a href="#contact" class="contact-btn">Contact Us</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="executive-grid">
+        
+        <div class="executive">
+
+            <img src="lengeri.jpg" alt="Executive 1">
+            <h3>Mr. Francis Baaladong</h3>
+            <h4>Director For Administration </h4>
+            <button id="learn" class="learn">Learn More</button>
+            <div id="Info" class="info">
+            <h3>Educational Information</3>
+<p>HND, Bilingual Secretaryship and Management Studies<br><br>
+BSc. Human Resource Management Studies</p><br>
+<h3>Contact Information</h3>
+<p class="image">
+    <a href="mailto:theboya2001@yahoo.com" target="_blank">
+        <img src="mail.png" alt="Email">
+    </a>
+
+    <a href="tel:+233545035465">
+        <img src="call.png" alt="Call">
+    </a>
+</p>
+            </div>
+
+        </div>
+
+        <div class="executive">
+            
+            <img src="Abu.jpg" alt="Executive 2">
+            <h3>Abu Kaala Abraham, PhD.</h3>
+            <h4>Director For Operations and Logistics</h4>
+            <button id="more" class="learn">Learn More</button>
+            <div id="Info2" class="info">
+            <h3>Educational Information</3>
+<p>BA, Environmental and Resource Management<br><br>
+    MPhil, Environmental and Resources Management<br><br>
+    PhD, Environmental and Resource Management  </p><br>
+<h3>Contact Information</h3>
+<p class="image">
+    <a href="mailto:kabrahamabu@yahoo.com" target="_blank">
+        <img src="mail.png" alt="Email">
+    </a>
+
+    <a href="tel:+233247802272">
+        <img src="call.png" alt="Call">
+    </a>
+</p>
+            </div>
+
+        </div>
+
+
+    <div class="executive">
+            
+        <img src="oscar.jpg" alt="Executive 3">
+        <h3>Oscar Atingani</h3>
+        <h4>Director For Finance</h4><br>
+        <button id="much" class="learn">Learn More</button>
+        <div id="Info3" class="info">
+        <h3>Educational Information</3>
+       <p>Diploma in Basic Education<br><br>
+    BA Economics</p><br>
+<h3>Contact Information</h3>
+<p class="image">
+<a href="mailto:o.atingani@gmail.com" target="_blank">
+    <img src="mail.png" alt="Email">
+</a>
+
+<a href="tel:+233544010090">
+    <img src="call.png" alt="Call">
+</a>
+</p>
+        </div>
+
+    </div>
+    <script>
+        document.getElementById('learn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var Info1 = document.getElementById('Info');
+    
+    // Toggle visibility
+    if (Info1.style.display === "block") {
+        Info1.style.display = "none";
+    } else {
+        Info1.style.display = "block";
+    }
+});
+
+    </script>
+    <script>
+         document.getElementById('more').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var Info1 = document.getElementById('Info2');
+    
+    // Toggle visibility
+    if (Info1.style.display === "block") {
+        Info1.style.display = "none";
+    } else {
+        Info1.style.display = "block";
+    }
+});
+    </script>
+    <script>
+        document.getElementById('much').addEventListener('click', function(event) {
+   event.preventDefault(); // Prevent default link behavior
+   var Info1 = document.getElementById('Info3');
+   
+   // Toggle visibility
+   if (Info1.style.display === "block") {
+       Info1.style.display = "none";
+   } else {
+       Info1.style.display = "block";
+   }
+});
+   </script>
+</body>
+</html>

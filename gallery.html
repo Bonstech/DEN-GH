@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(122, 132, 122);
+    text-align: center;
+}
+        header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: green;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 50px;
+    margin-left: 16px;
+    border-radius: 60%;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+.image img{
+    padding: 5px;
+}
+.image{
+    padding-top: 70px;
+}
+@media (max-width: 768px) {
+    .image{
+        text-align: center;
+    }
+    .image img{
+        height: 110px;
+        width: 130px;
+    }
+    header {
+        flex-direction: row; /* Keep logo and nav horizontal */
+        justify-content: space-between;
+        padding: 7px 7px;
+    }
+    
+    nav ul {
+        flex-direction: row; /* Ensure the nav links stay horizontal */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 4px; /* Add margin between the items */
+    }
+    
+    .logo img {
+        max-height: 40px;
+        border-radius: 60%;
+        margin-right: 2px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="LOGOmain.jpg" alt="Agricultural Organization Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="board.html">Board of Directors</a></li>
+               
+            <!--<a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>-->
+                <li><a href="About.html" target="_blank">About Us</a></li>
+                <!--<li><a href="#contact" class="contact-btn">Contact Us</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <div class="image">
+        <h2>Training Workshop Organized In Kaleo</h2>
+        <div class="video-container">
+            <video controls autoplay loop muted poster="preview-image.jpg">
+              <source src="your-video-file.mp4" type="video/mp4">
+              <source src="NewProject.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+        <img src="img1.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img2.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img3.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img4.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img5.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img6.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img7.jpg" alt="Photo" height="510px" width="520px">
+        <img src="img8.jpg" alt="Photo" height="510px" width="520px">
+        <img src="img9.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img10.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img11.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img12.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img14.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img15.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img16.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img17.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img18.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img19.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img20.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img21.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img22.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img23.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img24.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img25.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img26.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img27.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img28.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img29.jpg" alt="Photo" height="400px" width="520px">
+        <img src="img30.jpg" alt="Photo" height="400px" width="520px">
+
+    </div>
+</body>
+</html>
