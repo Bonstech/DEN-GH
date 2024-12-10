@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyBtn = document.getElementById('copy-btn');
     const callBtn = document.getElementById('call-btn');
     const momoNumber = '0545035465'; 
-    const code = '*170#';
+    const code = '*170%23';
 
     // Show options and toggle label when the main button is clicked
     mainBtn.addEventListener('click', () => {
