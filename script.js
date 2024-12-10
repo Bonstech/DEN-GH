@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyBtn = document.getElementById('copy-btn');
     const callBtn = document.getElementById('call-btn');
     const momoNumber = '0545035465'; 
-    const code = '*170%23';
 
     // Show options and toggle label when the main button is clicked
     mainBtn.addEventListener('click', () => {
@@ -37,9 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // Open phone dialer with MoMo number
-    callBtn.addEventListener('click', () => {
-        window.location.href = `tel:${code}`;
-    });
 });
 
