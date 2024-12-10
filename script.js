@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(momoNumber)
             .then(() => {
-                alert('MoMo number copied to clipboard!');
+                alert('MoMo number copied successfully! Click on "Donate" to proceed.');
             })
             .catch(err => {
                 alert('Failed to copy the number.');
