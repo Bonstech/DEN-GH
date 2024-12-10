@@ -49,10 +49,15 @@
             <button id="main-btn">Show Your Support</button>
             <div id="options" class="hidden">
               <button id="copy-btn">Copy Number</button>
-              <button id="call-btn"><a href="tel:*170#">Donate</a></button>
+              <button id="call-btn">Donate</button>
             </div>
           </div>
     </main>
 <script src="script.js"></script>
+    <script>
+        document.getElementById('call-btn').addEventListener('click', () => {
+        window.location.href = 'tel:*170%23';
+    });
+    </script>
 </body>
 </html>
