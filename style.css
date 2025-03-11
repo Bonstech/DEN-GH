@@ -94,9 +94,9 @@ button {
 }
 
 .logo img {
-    max-height: 100px;
+    max-height: 90px;
     margin-left: 16px;
-    border-radius: 60%;
+    border-radius: 40%;
 }
 
 nav {
