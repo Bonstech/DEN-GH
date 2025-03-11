@@ -22,7 +22,7 @@ body {
 }
 
 /*Video Play Button*/
-.container-button {
+.button-container {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
@@ -33,11 +33,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.container-button:hover {
+.button-container:hover {
     background-color: #ff6b81;
 }
 
-.container-button:active {
+.button-container:active {
     background-color: #ff4757;
 }
 
