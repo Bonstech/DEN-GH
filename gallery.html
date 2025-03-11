@@ -5,171 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <style>
+        /* General Styles */
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgb(122, 132, 122);
-    text-align: center;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header Styles */
         header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #12da7d;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.logo img {
-    max-height: 50px;
-    margin-left: 16px;
-    border-radius: 60%;
-}
+        .logo img {
+            max-height: 50px;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
 
-nav {
-    margin-right: 20px;
-}
+        nav {
+            margin-right: 20px;
+        }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-nav ul li {
-    margin: 0 10px;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
 
-nav ul li:hover {
-    text-decoration: underline;
-}
-.image img{
-    padding: 5px;
-}
-.image{
-    padding-top: 70px;
-}
-@media (max-width: 768px) {
-    .image{
-        text-align: center;
-    }
-    .image img{
-        height: 110px;
-        width: 130px;
-    }
-    header {
-        flex-direction: row; /* Keep logo and nav horizontal */
-        justify-content: space-between;
-        padding: 7px 7px;
-    }
-    
-    nav ul {
-        flex-direction: row; /* Ensure the nav links stay horizontal */
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+        nav ul li a:hover {
+            color: #18bc9c;
+        }
 
-    nav ul li {
-        margin: 4px; /* Add margin between the items */
-    }
-    
-    .logo img {
-        height: 110px;
-        width: 60px;
-        border-radius: 60%;
-        margin-right: 2px;
-    }
-}
-/*video button*/
+        /* Main Content */
         .container {
-  text-align: center;
-            margin-bottom: 6px;
-            
-}
+            padding-top: 80px;
+            margin-bottom: 20px;
+        }
 
-.watch-video-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  font-size: 16px;
-  text-decoration: none;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
 
-.watch-video-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
+        .watch-video-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: #18bc9c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .watch-video-btn:hover {
+            background-color: #128f76;
+            transform: scale(1.05);
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .logo img {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .watch-video-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="LogoMain.png" alt="Agricultural Organization Logo" height="65px" width="65px"></a>
-        </div><br><br>
+            <a href="index.html"><img src="LogoMain.png" alt="Agricultural Organization Logo" height="50px" width="50px"></a>
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="board.html">Board of Directors</a></li>
-               
-            <!--<a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>-->
                 <li><a href="About.html" target="_blank">About Us</a></li>
-                <!--<li><a href="#contact" class="contact-btn">Contact Us</a></li>-->
             </ul>
         </nav>
     </header>
-        <h2 style = "color:rgb(122, 132, 122);">Training WorkShop At Kaleo</h2>
-   <div class="container">
-        <!-- Button with embedded link -->
+
+    <div class="container">
+        <h2>Training Workshop at Kaleo</h2>
         <a href="https://drive.google.com/file/d/18beC2Cht0x8QnyAar2gVYk0tLrsd7wr6/view?usp=drivesdk" target="_blank" class="watch-video-btn">Watch Video</a>
-      </div>
-    
-        <div class="image">
-        <img src="img1.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img2.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img3.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img4.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img5.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img6.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img7.jpg" alt="Photo" height="510px" width="520px">
-        <img src="img8.jpg" alt="Photo" height="510px" width="520px">
-        <img src="img9.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img10.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img11.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img12.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img14.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img15.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img16.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img17.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img18.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img19.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img20.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img21.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img22.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img23.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img24.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img25.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img26.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img27.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img28.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img29.jpg" alt="Photo" height="400px" width="520px">
-        <img src="img30.jpg" alt="Photo" height="400px" width="520px">
- </div>
-      
+    </div>
+
+    <div class="image-gallery">
+        <img src="img1.jpg" alt="Photo">
+        <img src="img2.jpg" alt="Photo">
+        <img src="img3.jpg" alt="Photo">
+        <img src="img4.jpg" alt="Photo">
+        <img src="img5.jpg" alt="Photo">
+        <img src="img6.jpg" alt="Photo">
+        <img src="img8.jpg" alt="Photo">
+        <img src="img9.jpg" alt="Photo">
+        <img src="img10.jpg" alt="Photo">
+        <img src="img11.jpg" alt="Photo">
+        <img src="img12.jpg" alt="Photo">
+        <img src="img14.jpg" alt="Photo">
+        <img src="img15.jpg" alt="Photo">
+        <img src="img16.jpg" alt="Photo">
+        <img src="img17.jpg" alt="Photo">
+        <img src="img18.jpg" alt="Photo">
+        <img src="img19.jpg" alt="Photo">
+        <img src="img20.jpg" alt="Photo">
+        <img src="img21.jpg" alt="Photo">
+        <img src="img22.jpg" alt="Photo">
+        <img src="img23.jpg" alt="Photo">
+        <img src="img24.jpg" alt="Photo">
+        <img src="img25.jpg" alt="Photo">
+        <img src="img26.jpg" alt="Photo">
+        <img src="img27.jpg" alt="Photo">
+        <img src="img28.jpg" alt="Photo">
+        <img src="img29.jpg" alt="Photo">
+        <img src="img30.jpg" alt="Photo">
+    </div>
 </body>
 </html>

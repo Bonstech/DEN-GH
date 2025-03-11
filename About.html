@@ -3,156 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn more About Us</title>
-
+    <title>Learn More About Us</title>
     <style>
-         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
         header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #12da7d;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.logo img {
-    max-height: 50px;
-    margin-left: 16px;
-    border-radius: 60%;
-}
+        .logo img {
+            max-height: 50px;
+            margin-left: 20px;
+            border-radius: 50%;
+        }
 
-nav {
-    margin-right: 20px;
-}
+        nav {
+            margin-right: 20px;
+        }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-nav ul li {
-    margin: 0 10px;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
 
-nav ul li:hover {
-    text-decoration: underline;
-}
-.content {
-    padding-top: 70px;
-    padding-left: 10px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-h3{
-    margin-bottom: 1px;
-}
+        nav ul li a:hover {
+            color: #18bc9c;
+        }
 
-@media (max-width: 768px) {
-    .content {
-    padding-top: 90px;
-    padding-left: 10px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;}
+        /* Main Content */
+        main {
+            padding-top: 80px;
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    header {
-        flex-direction: row; /* Keep logo and nav horizontal */
-        justify-content: space-between;
-        padding: 7px 7px;
-    }
-    
-    nav ul {
-        flex-direction: row; /* Ensure the nav links stay horizontal */
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    nav ul li {
-        margin: 8px; /* Add margin between the items */
-    }
-    
-    .logo img {
-        max-height: 40px;
-        border-radius: 60%;
-        margin-right: 2px;
-        margin-left: 10px;
-    }
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
 
-}
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li b {
+            color: #18bc9c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .logo img {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px;
+            }
+
+            main {
+                padding-top: 100px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            p, ul li {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            main {
+                padding-top: 90px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            p, ul li {
+                font-size: 0.85em;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="LogoMain.png" alt="Agricultural Organization Logo" height="65px" width="65px"></a>
+            <a href="index.html"><img src="LogoMain.png" alt="Agricultural Organization Logo" height="50px" width="50px"></a>
         </div>
         <nav>
             <ul class="nav-links">
-            <!--<li><a href="index.html">Home</a></li>-->
                 <li><a href="#services">Programs & Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <!--<li><a href="#contact" class="contact-btn">Contact Us</a></li>-->
             </ul>
         </nav>
     </header>
 
     <main>
-        
         <div class="content">
-            
-                <p>Most farmers in the Nadowli-Kaleo District, especially women, are peasant farmers who are economically vulnerable and rely heavily on the land for their livelihood. Hence, there is an urgent need to equip these peasant farmers with the knowledge and skills of sustainable farming practices to combat the current trend of climate change which is posing a threat of food insecurity in the district. Disong EcoFarmers Network Ghana (DEN-GH) is a non-governmental organisation (NGO) established in Kaleo, in the Upper West Region of Ghana, with the focus on climate change adaptation by promoting sustainable agriculture and environmental stewardship in the Nadowli-Kaleo District to support farmers. Founded in the year 2023, the organisation is empowering local farmers through education and support aimed at adopting sustainable farming practices and protecting the environment.
-                <h3>OUR CORE ACTIVITIES INCLUDE</h3> 
-                <ul type="square">
-                    <li><b>Education and support:</b><br> We provide comprehensive training and resources to support farmers’ transition to sustainable farming methods, enhancing productivity while preserving environmental health.</li><br>
-                    <li><b>Climate Change Awareness:</b><br> We raise awareness about climate change and its impact on agriculture, equipping farmers with knowledge to mitigate its effects and adapt their practices accordingly.</li><br>
-                    <li><b>Tree Planting Advocacy:</b><br> We advocate for and facilitate tree planting initiatives, emphasizing the importance of trees in combating climate change and supporting biodiversity.</li><br>
-                    <li><b>Field Officers Training:</b><br> We train field officers who offer on-the-ground support and guidance to farmers, ensuring they have access to innovative sustainable practices and technologies.</li><br>
-                    <li><b>Encourage the Use of Organic Fertilizers:</b><br> We train and encourage farmers on how to prepare organic fertilizers from livestock, animals’ droppings, and domestic waste.</li><br>
-                    <li><b>Empowering Local Communities:</b><br> we empower local communities through education, advocacy, and implementation of eco- friendly agricultural techniques. </li><br>
-                    <li><b>Support for Vulnerable Peasant Farmers:</b><br>Provision of ploughing services and supply of seeds to vulnerable peasant farmers.</li>
+            <p>Most farmers in the Nadowli-Kaleo District, especially women, are peasant farmers who are economically vulnerable and rely heavily on the land for their livelihood. Hence, there is an urgent need to equip these peasant farmers with the knowledge and skills of sustainable farming practices to combat the current trend of climate change which is posing a threat of food insecurity in the district. Disong EcoFarmers Network Ghana (DEN-GH) is a non-governmental organisation (NGO) established in Kaleo, in the Upper West Region of Ghana, with the focus on climate change adaptation by promoting sustainable agriculture and environmental stewardship in the Nadowli-Kaleo District to support farmers. Founded in the year 2023, the organisation is empowering local farmers through education and support aimed at adopting sustainable farming practices and protecting the environment.</p>
 
-                </ul>
-            
-                
-                <h3>MISSION STATEMENT</h3>  
-                <p>To empower and support  economically vulnerable  peasant farmers in the Nadowli-Kaleo District and beyond by promoting sustainable farming practices, raising awareness about climate change and adopting the best strategies to mitigate climate change and advocating for environmental consciousness through education, advocacy, and community engagement.</p>
-                
-                <h3>VISION STATEMENT</h3> 
-                <p>To create a resilient and thriving agricultural community in Ghana where sustainable practices are the norm, environmental impact is minimized and future generations benefit from a healthier and more productive ecosystem.</p><br>
+            <h3>OUR CORE ACTIVITIES INCLUDE</h3>
+            <ul>
+                <li><b>Education and support:</b><br> We provide comprehensive training and resources to support farmers’ transition to sustainable farming methods, enhancing productivity while preserving environmental health.</li>
+                <li><b>Climate Change Awareness:</b><br> We raise awareness about climate change and its impact on agriculture, equipping farmers with knowledge to mitigate its effects and adapt their practices accordingly.</li>
+                <li><b>Tree Planting Advocacy:</b><br> We advocate for and facilitate tree planting initiatives, emphasizing the importance of trees in combating climate change and supporting biodiversity.</li>
+                <li><b>Field Officers Training:</b><br> We train field officers who offer on-the-ground support and guidance to farmers, ensuring they have access to innovative sustainable practices and technologies.</li>
+                <li><b>Encourage the Use of Organic Fertilizers:</b><br> We train and encourage farmers on how to prepare organic fertilizers from livestock, animals’ droppings, and domestic waste.</li>
+                <li><b>Empowering Local Communities:</b><br> We empower local communities through education, advocacy, and implementation of eco-friendly agricultural techniques.</li>
+                <li><b>Support for Vulnerable Peasant Farmers:</b><br> Provision of ploughing services and supply of seeds to vulnerable peasant farmers.</li>
+            </ul>
 
-                <h3>Contact Information</h3>
-                <p>
-                    0545035465<br>0544010090<br>0247802272
-                </p>
-        
-        
-            </div>
+            <h3>MISSION STATEMENT</h3>
+            <p>To empower and support economically vulnerable peasant farmers in the Nadowli-Kaleo District and beyond by promoting sustainable farming practices, raising awareness about climate change and adopting the best strategies to mitigate climate change and advocating for environmental consciousness through education, advocacy, and community engagement.</p>
+
+            <h3>VISION STATEMENT</h3>
+            <p>To create a resilient and thriving agricultural community in Ghana where sustainable practices are the norm, environmental impact is minimized and future generations benefit from a healthier and more productive ecosystem.</p>
+
+            <h3>Contact Information</h3>
+            <p>
+                0545035465<br>0544010090<br>0247802272
+            </p>
+        </div>
     </main>
-<script src="script.js"></script>
 </body>
 </html>
