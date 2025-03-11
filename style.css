@@ -45,7 +45,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: green;
+    background: #12da7d;
     
     display: flex;
     justify-content: space-between;
