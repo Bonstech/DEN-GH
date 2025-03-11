@@ -46,12 +46,12 @@ header {
     top: 0;
     width: 100%;
     background: green;
-    padding: 6px 0;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    padding-buttom: 5px;
+    padding-buttom: 2px;
 }
 
 /* MoMo Button Section */
