@@ -90,6 +90,28 @@ nav ul li:hover {
         margin-right: 2px;
     }
 }
+/*video button*/
+        .container {
+  text-align: center;
+}
+
+.watch-video-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.watch-video-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
     </style>
 </head>
 <body>
@@ -143,10 +165,9 @@ nav ul li:hover {
         <img src="img29.jpg" alt="Photo" height="400px" width="520px">
         <img src="img30.jpg" alt="Photo" height="400px" width="520px">
 
-      <button class="button-container">
-        <a href="https://www.youtube.com/watch?v=example" target="_blank">
-            Watch Video
-        </a>
-    </button>
+      <div class="container">
+        <!-- Button with embedded link -->
+        <a href="https://example.com/video" target="_blank" class="watch-video-btn">Watch Video</a>
+      </div>
 </body>
 </html>
