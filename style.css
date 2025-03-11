@@ -22,22 +22,22 @@ body {
 }
 
 /*Video Play Button*/
-.video-button {
+.container-button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
     color: #fff;
     background-color: #ff4757;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
 }
 
-.video-button:hover {
+.container-button:hover {
     background-color: #ff6b81;
 }
 
-.video-button:active {
+.container-button:active {
     background-color: #ff4757;
 }
 
