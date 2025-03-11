@@ -97,6 +97,7 @@ button {
 .logo img {
     margin-left: 16px;
     /*border-radius: 40%;*/
+     margin-buttom: 6px;
 }
 
 nav {
