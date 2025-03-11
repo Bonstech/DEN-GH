@@ -51,6 +51,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    padding-buttom: 5px;
 }
 
 /* MoMo Button Section */
