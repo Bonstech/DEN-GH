@@ -36,6 +36,39 @@
             border-radius: 50%;
         }
 
+        .modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
         nav {
             margin-right: 20px;
         }
@@ -173,6 +206,7 @@
             <ul class="nav-links">
                 <li><a href="#services">Programs & Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#privacy-policy" id="privacyLink">Featured Article</a></li>
             </ul>
         </nav>
     </header>
@@ -204,5 +238,66 @@
             </p>
         </div>
     </main>
+    <div id="privacyModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2><b>Climate Change and Its Ripping Effects on Local Farmers in the Nadowli-Kaleo District</b></h2><br>
+    <div class="policy-text">
+      <!-- Paste your Privacy Policy content here -->
+      <p><i>By Francis Angbabora Baaladong</i><br>
+Across the savannah belt of Ghana, the devastating impacts of climate change are no longer abstract theories discussed in distant conferences, they are harsh, daily realities for local farmers.<br><br>
+
+
+In the Nadowli-Kaleo District, the situation has become particularly dire. Last year, many farmers lost significant portions of their crops due to an unusually long spell of drought, leaving households struggling to recover and pushing food security to the brink. Even this year, another looming drought threatens livelihoods, as farmers have already planted with hopeful expectations of rain, yet the rains have failed to come as anticipated.<br><br>
+
+
+
+While climate change is undoubtedly linked to global trends, many of the harsh conditions we experience are worsened by human activities in our communities. Several harmful practices are accelerating environmental degradation, making the climate crisis even more personal and painful for our farmers.<br><br>
+
+
+
+One of the major culprits is the indiscriminate cutting down of trees, particularly economically valuable species like Dawadawa and Shea nut. These trees don’t just provide food and income for households; they also play a vital role in regulating the local climate. Their destruction weakens the land’s ability to attract and retain rainfall, deepening the drought conditions we face today.<br><br>
+
+
+
+Equally destructive is the rampant practice of bush burning. Every dry season, vast stretches of bushland and farmland are deliberately set ablaze for hunting or land preparation. These fires destroy critical trees and vegetation that serve as natural shields for the soil, protecting it from the sun’s harsh rays. Without this natural cover, the soil dries out, losing fertility, and prolonging the droughts that cripple farming activities across the district.<br><br>
+
+
+ Adding to the crisis is the indiscriminate use of chemical weedicides, especially the one commonly called “Condemn.” While these chemicals may provide quick weed control, they carry serious long-term consequences. They don’t just kill weeds; they also destroy beneficial soil organisms that loosen the soil and help retain moisture. As a result, even when the rains eventually come, the hardened soil struggles to absorb water, leading to poor crop yields.</br><br>
+         More worrying is the mysterious death of livestock that graze on grasses sprayed with these harmful chemicals. Many farmers continue to lose their animals after grazing on such treated areas, worsening their economic hardship. Yet despite these dangers, many farmers remain unaware or dismissive of the risks these chemicals pose to their animals and to their own livelihoods.</br><br>
+        Given these challenges, the need for sustainable farming practices has never been more urgent. We must transition from destructive habits to farming methods that work with nature, not against it. Agroforestry, for example, growing trees alongside crops, not only restores the environment but also provides additional sources of food and income. Composting and the use of organic manure naturally enrich the soil, while techniques like mulching and cover cropping help retain soil moisture and fertility.</br><br>
+        Community education is equally critical. Farmers must be made aware of the dangers of bush burning and reckless chemical use. Protecting and planting trees should become a standard part of every farmer’s strategy, not only as a means of environmental preservation but also as an investment in the future of farming itself.</br><br>
+        However, this is not the responsibility of farmers alone. Traditional authorities and community leaders must rise to the occasion, taking the lead in sensitising their people about the dangers of indiscriminate tree felling, bush burning, and chemical misuse. Government agencies, especially the Forestry Commission and the Department of Agriculture, must intensify their efforts by providing technical support, seedlings, and sustainable alternatives to harmful chemicals.</br><br>
+        Agricultural Extension Officers must actively collaborate with farmers to promote eco-friendly methods, while NGOs like Disong EcoFarmers Network Ghana (DEN-GH) will continue to play a pivotal role in farmer education, tree-planting programmes, and community engagement.</br><br>
+        Without urgent, collective, and sustained action from all stakeholders, the future of farming in Nadowli-Kaleo and the survival of countless families is at risk.</br><br>
+        <p>By Francis Angbabora Baaladong</p>
+        <p>Disong EcoFarmers Network Ghana (DEN-GH)</p>
+    </div>
+  </div>
+</div>
+
+    <script>
+// Get the modal and the link
+const modal = document.getElementById("privacyModal");
+const privacyLink = document.querySelector('a[href="#privacy-policy"]'); // Adjust selector to match your footer link
+
+// Open modal when the Privacy Policy link is clicked
+privacyLink.addEventListener("click", function(e) {
+  e.preventDefault(); // Prevent page navigation
+  modal.style.display = "block";
+});
+
+// Close modal when the 'X' is clicked
+document.querySelector(".close").addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Close modal if user clicks outside the modal
+window.addEventListener("click", function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
 </body>
 </html>
